@@ -1,0 +1,107 @@
+$margin: 0;
+$primary-background: #333;
+$secondary-background: #777;
+$primary-color: #fff;
+$third-background: #ccf;
+$table-background-color: #ddf;
+$clicky-background-color: #aaf;
+$font-size: 20px;
+$secondary-font-size: 12px;
+$position: absolute;
+$top: 0;
+$left: 0;
+$border-top: 0;
+$border-left: 0;
+$border-right: 1px solid #555;
+$border-bottom: 1px solid #555;
+$border-bottom-right-radius: 6px;
+$box-shadow: #000 0 0 15px;
+$font-family: 'Courier New', Courier, monospace;
+$text-align: center;
+$right-text-align: right;
+$width: 80%;
+$table-width: 85%;
+$secondary-width: 80px;
+$secondary-color: #111;
+$font-weight: normal;
+$border: 1px solid #555;
+$transition: width 0.5s, background-color 0.5s;
+$border-radius: 3px;
+$cursor: pointer;
+$second-border-radius:50%;
+$no-outline: none;
+
+body {
+  margin: $margin;
+  background-color: $primary-background;
+  color: $primary-color;
+}
+
+table.menu {
+  position: $position;
+  top: $top;
+  left: $left;
+  border-top: $border-top;
+  border-left: $border-left;
+  border-right: $border-right;
+  border-bottom: $border-bottom;
+  border-bottom-right-radius: $border-bottom-right-radius;
+  background-color: $secondary-background;
+  box-shadow: $box-shadow;
+  font-family: $font-family;
+}
+
+table.menu h1 {
+  margin: $margin;
+  font-size: $font-size;
+}
+
+table.menu td {
+  text-align: $text-align;
+}
+
+table.menu button {
+  width: $width;
+  background-color: $third-background;
+  color: $secondary-color;
+  text-align: $text-align;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $secondary-font-size;
+  border: $border;
+  transition: $transition;
+  border-radius: $border-radius;
+}
+
+table.menu button:hover {
+  cursor: $cursor;
+  background-color: $table-background-color;
+  width: $table-width;
+  transition: $transition;
+}
+
+table.menu button:active,
+table.menu button:focus {
+  outline: $no-outline;
+}
+
+table.menu td.label {
+  width: $secondary-width;
+}
+
+table.menu td.label,
+table.menu td.result {
+  text-align: $right-text-align;
+}
+
+.clicky {
+  position: absolute;
+  border-radius: $second-border-radius;
+  background-color: $clicky-background-color;
+  border: $border;
+  box-shadow: $box-shadow;
+}
+
+.clicky:hover {
+  cursor: $cursor;
+}

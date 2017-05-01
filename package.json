@@ -1,0 +1,31 @@
+{
+  "name": "sassy-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:server": "live-server",
+    "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
+    "dev": "run-p dev:*",
+    "build:htmlhint": "htmlhint index.html",
+    "deploy:surge": "surge --project . --domain sassy-project.surge.sh",
+    "deploy": "run-s build:* deploy:surge",
+    "build:test": "standard clicky.js",
+    "build:stylelint": "stylelint source/scss/style.scss",
+    "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "build": "run-s build:*"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "surge": "^0.19.0"
+  },
+  "dependencies": {
+    "htmlhint": "^0.9.13",
+    "standard": "^10.0.2",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  }
+}
